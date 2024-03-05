@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        label {
+            margin: 4px;
+            padding: 4px;
+        }
+
+        body {
+            margin: 20px;
+            padding: 5px;
+        }
+
+        div {
+            margin: auto;
+            width: 50%;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            font-size: larger;
+            width: 150px;
+            height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST" id="primaryDetailsForm">
+        <fieldset>
+            <legend>Primary Details</legend>
+            <label for="medicareNo">Medicare No</label>
+            <input type="number" id="medicareNo" name="medicareNo" class="form-control"> / <input type="text"
+                name="medicareNo" size="4">
+            <br>
+            <label for="validTill">Valid Till</label>
+            <input type="date" id="validTill" name="validTill"> <input id="validTill" type="number" disabled>
+            <br>
+            <label for="title">Title</label>
+            <select id="title" name="title">
+                <option value="none">None</option>
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+                <option value="mrs">Mrs.</option>
+            </select>
+            <br>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Lastname, Firstname, Middlename" class="form-control">
+            <br>
+            <label for="prefName">Pref. Name</label>
+            <input type="text" id="prefName" name="prefName" class="form-control">
+            <br>
+            <label for="dob">DOB</label>
+            <input type="checkbox" name="dobcheck" id="dobcheck" value="true">
+            <input type="date" id="dob" name="dob" class="form-control">
+            <br>
+            <label for="sex">Sex</label>
+            <input type="radio" name="sex" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="sex" id="female" value="female">
+            <label for="female">Female</label>
+            <br>
+            <label for="familyName">Family Name</label>
+            <input type="text" id="familyName" name="familyName">
+            <input type="text" id="N" value="N" disabled size="1">
+            <input type="text" id="I" value="I" disabled size="1">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Contact Details</legend>
+            <fieldset>
+                <legend>Phone</legend>
+
+                <label for="home">Home</label>
+                <input type="number" id="home" name="home" class="form-control">
+                <br>
+                <label for="work">Work</label>
+                <input type="number" id="work" name="work" class="form-control">
+                <br>
+                <label for="mobile">Mobile</label>
+                <input type="number" id="mobile" name="mobile" class="form-control">
+                <br>
+                <label for="nextOfKin">Next of Kin</label>
+                <input type="number" id="nextOfKin" name="nextOfKin" class="form-control">
+                <br>
+                <label for="nextOfKinph">Next of Kin Ph:</label>
+                <input type="number" id="nextOfKinph" name="nextOfKinph" class="form-control">
+            </fieldset>
+            <br>
+            <label for="emergNo">Emerg. No</label>
+            <input type="number" id="emergNo" name="emergNo" class="form-control">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control">
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Address Details</legend>
+            <fieldset>
+                <legend>Residential Address</legend>
+                <label for="address1">Address 1</label>
+                <input type="text" id="address1" name="address1" class="form-control">
+                <br>
+                <label for="address2">Address 2</label>
+                <input type="text" id="address2" name="address2" class="form-control">
+                <br>
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name="suburb" class="form-control">
+                <br>
+                <label for="state">State</label>
+                <select id="state" name="state" class="form-control">
+                    <option>Andhra Pradesh</option>
+                    <option>Goa</option>
+                    <option>
+                        Tamil Nadu
+                    </option>
+                    <option>
+                        Kerala
+                    </option>
+                    <option>
+                        Himacal Pradesh
+                    </option>
+                    <option>
+                        Sikkim
+                    </option>
+                </select>
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode" name="postalCode">
+                <input type="text" value="?" disabled size="1">
+                <br>
+                <label for="country">country</label>
+                <input type="text" id="country" name="country" class="form-control">
+                <br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Single Address</legend>
+                <span>Are Mailing Adress and Residential Address same?</span>
+                <input type="checkbox" id="confirm" name="confirm">
+                <label for="confirm">Yes</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    Mailing Address
+                </legend>
+                <label for="address1">Address 1</label>
+                <input type="text" id="address1" name="address1" class="form-control">
+                <br>
+                <label for="address2">Address 2</label>
+                <input type="text" id="address2" name="address2" class="form-control">
+                <br>
+                <label for="suburb">Suburb</label>
+                <input type="text" id="suburb" name="suburb" class="form-control">
+                <br>
+                <label for="state">State</label>
+                <select id="state" name="state" class="form-control">
+                    <option>Andhra Pradesh</option>
+                    <option>Goa</option>
+                    <option>
+                        Tamil Nadu
+                    </option>
+                    <option>
+                        Kerala
+                    </option>
+                    <option>
+                        Himacal Pradesh
+                    </option>
+                    <option>
+                        Sikkim
+                    </option>
+                </select>
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode" name="postalCode">
+                <input type="text" value="?" disabled size="1">
+                <br>
+                <label for="country">country</label>
+                <input type="text" id="country" name="country" class="form-control">
+                <br>
+            </fieldset>
+            <br>
+        </fieldset>
+        <br>
+        <label for="IHInumber">IHI Number</label>
+        <span>80036</span>
+        <input type="number" id="IHInumber" name="IHInumber" class="form-control">
+        <br>
+        <label for="numberStatus">Number Status</label>
+        <input type="text" id="numberStatus" name="numberStatus" class="form-control">
+        <br>
+        <label for="recordStatus">Record Status</label>
+        <input type="text" id="recordStatus" name="recordStatus" class="form-control">
+        <br>
+        <label for="lastUpdated">Last Updated</label>
+        <input type="text" id="lastUpdated" name="lastUpdated" class="form-control">
+        <br>
+        <br>
+        <div class="text-center">
+            <input type="submit" id="submit" value="Submit" class="btn-success">
+            <input type="reset" id="reset" value="Clear" class="btn-danger">
+        </div>
+    </form>
+</body>
+
+</html>
