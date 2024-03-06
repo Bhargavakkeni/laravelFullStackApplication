@@ -35,7 +35,7 @@
 
         .container {
             background-color: white;
-            margin: 35px 57px 10px 13px;
+           /* margin: 35px 57px 10px 13px;*/
         }
 
         .col>p {
@@ -48,242 +48,248 @@
             font-size: medium;
         }
 
-        
+        body {
+            background-color: #F3F6FD;
+        }
     </style>
 
 </head>
 
-<body style="background-color: #F3F6FD;">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <span class="navbar-toggler-icon"></span>
-            <a class="navbar-brand" href="#" style="margin: 0 15px;">Portfolio</a>
-            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+<body>
+    <div class="container-fluid" style="background-color: #F3F6FD;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <span class="navbar-toggler-icon"></span>
+                <a class="navbar-brand" href="#" style="margin: 0 15px;">Portfolio</a>
+                <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <form class="d-flex" role="search">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basicAddon1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
-                                        <title>Search</title>
-                                        <circle cx="10.5" cy="10.5" r="7.5" />
-                                        <path d="M21 21l-5.2-5.2" />
-                                    </svg>
-                                </span>
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                                    aria-describedby="basicAddon1" style="width: 500px;">
-                        </form>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <form class="d-flex" role="search">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basicAddon1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24">
+                                            <title>Search</title>
+                                            <circle cx="10.5" cy="10.5" r="7.5" />
+                                            <path d="M21 21l-5.2-5.2" />
+                                        </svg>
+                                    </span>
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search" aria-describedby="basicAddon1" style="width: 500px;">
+                            </form>
+                        </li>
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-moon" viewBox="0 0 16 16">
+                        <path
+                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bell" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                    </svg>
+                    <div class="vertical-slash"></div>
+                    <div id="container" width="20" height="20">
+                        <img src="Photograph.jpeg" class="rounded-circle" alt="photograph" style="width: 50px;">
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row row-cols-auto">
+            <div class="d-flex col-sm-1" style="float: left;">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-house-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778zM8.5.015V7.5h7.485A8 8 0 0 0 8.5.015" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-calendar4" viewBox="0 0 16 16">
+                            <path
+                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                        </svg>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            class="bi bi-gear" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                            <path
+                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                        </svg>
                     </li>
                 </ul>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                </svg>
-                <div class="vertical-slash"></div>
-                <div id="container" width="20" height="20">
-                    <img src="Photograph.jpeg" class="rounded-circle" alt="photograph" style="width: 50px;">
-                </div>
             </div>
-        </div>
-    </nav>
-
-    <div class="d-flex" style="float: left;">
-        <ul>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                    class="bi bi-house-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
-                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
-                </svg>
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                    class="bi bi-pie-chart-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778zM8.5.015V7.5h7.485A8 8 0 0 0 8.5.015" />
-                </svg>
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                    class="bi bi-calendar4" viewBox="0 0 16 16">
-                    <path
-                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
-                </svg>
-            </li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
-                    <path
-                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
-                </svg>
-            </li>
-        </ul>
-    </div>
-    <div class="container rounded-4" style="float: right; height: 680px;">
-        <div class="row" style="font-size: x-large; font-family: sans-serif; padding: 10px;">
-            <div class="col-8">
-                <span>Projects</span>
-            </div>
-            <div class="col-4" style="text-align: right;">
-                March, 6
-            </div>
-        </div>
-        <div class="row row-cols-auto" style="padding: 15px;">
-            <div class="col">
-                <p>45</p>
-                <p>
-                    In Progress <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
-                            class="bi bi-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                        </svg></span>
-                </p>
-            </div>
-            <div class="col">
-                <p>26</p>
-                <p>
-                    Upcoming <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
-                            class="bi bi-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                        </svg></span>
-
-                </p>
-            </div>
-            <div class="col">
-                <p>
-                    72
-                </p>
-                <p>
-                    Total Projects
-                </p>
-            </div>
-        </div>
-        <div class="row row-cols-3">
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #FEE4CB;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
-
-                        <h5 class="card-title text-center" style="margin-top: 28px;">Web Desiging</h5>
-                        <p class="card-text text-center">Prototyping</p>
+            <div class="col-sm-11">
+                <div class="container rounded-4" style="float: right; height: 680px;">
+                    <div class="row" style="font-size: x-large; font-family: sans-serif; padding: 10px;">
+                        <div class="col-8">
+                            <span>Projects</span>
+                        </div>
+                        <div class="col-4" style="text-align: right;">
+                            March, 6
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #ed913c;">2 Days Left</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #E9E7FD;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
+                    <div class="row row-cols-auto" style="padding: 15px;">
+                        <div class="col">
+                            <p>45</p>
+                            <p>
+                                In Progress <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                        fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                    </svg></span>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>26</p>
+                            <p>
+                                Upcoming <span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                        fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                    </svg></span>
 
-                        <h5 class="card-title text-center" style="margin-top: 28px;">Testing</h5>
-                        <p class="card-text text-center">Prototyping</p>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                72
+                            </p>
+                            <p>
+                                Total Projects
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #4d3ce8;">2 Days Left</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #DBF6FD;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
+                    <div class="row row-cols-3">
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #FEE4CB;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
 
-                        <h5 class="card-title text-center" style="margin-top: 28px;">SVG Animations</h5>
-                        <p class="card-text text-center">Prototyping</p>
-                    </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #14728b;">2 Days Left</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #FFD3E2;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">Web Desiging</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #ed913c;">2 Days Left</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #E9E7FD;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
 
-                        <h5 class="card-title text-center" style="margin-top: 28px;">UI Development</h5>
-                        <p class="card-text text-center">Prototyping</p>
-                    </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #DF3670;">2 Days Left</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #C8F7DC;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">Testing</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #4d3ce8;">2 Days Left</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #DBF6FD;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
 
-                        <h5 class="card-title text-center" style="margin-top: 28px;">Data Analysis</h5>
-                        <p class="card-text text-center">Prototyping</p>
-                    </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #117c39;">2 Days Left</span></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded-4 mb-3" style="background-color: #D5DEFF;">
-                    <div class="card-body ">
-                        <span>March 6, 2024</span><span style="float: right;"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
-                            </svg></span>
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">SVG Animations</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #14728b;">2 Days Left</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #FFD3E2;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
 
-                        <h5 class="card-title text-center" style="margin-top: 28px;">Web Desiging</h5>
-                        <p class="card-text text-center">Prototyping</p>
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">UI Development</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #DF3670;">2 Days Left</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #C8F7DC;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
+
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">Data Analysis</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #117c39;">2 Days Left</span></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-4 mb-3" style="background-color: #D5DEFF;">
+                                <div class="card-body ">
+                                    <span>March 6, 2024</span><span style="float: right;"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                        </svg></span>
+
+                                    <h5 class="card-title text-center" style="margin-top: 28px;">Web Desiging</h5>
+                                    <p class="card-text text-center">Prototyping</p>
+                                </div>
+                                <div class="card-footer bg-transparent"><span class="badge rounded-pill"
+                                        style="background-color: #FFF4EA; color: #2343b1;">2 Days Left</span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer bg-transparent"><span class="badge rounded-pill"
-                            style="background-color: #FFF4EA; color: #2343b1;">2 Days Left</span></div>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
