@@ -1,0 +1,142 @@
+body {
+    padding: 5px;
+}
+
+.png {
+    width: 50px;
+    height: 50px;
+}
+
+#sidebar {
+    flex-direction: column;
+}
+
+.col-4,
+.col-8 {
+    width: auto;
+}
+
+
+#photograph {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: inherit;
+}
+
+
+
+li .png {
+    width: 30px;
+    height: 30px;
+}
+
+.sideHeader {
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+    color: indigo;
+}
+
+span.weight {
+    font-weight: 300;
+}
+
+span.sideHeader>p {
+    margin: 15px 4px 5px 0;
+}
+
+.position {
+    margin: 2px;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-65 {
+    width: 65%;
+}
+
+#skills {
+    margin: 15px 4px 5px 0;
+}
+
+.hotPink {
+    background-color: hotpink;
+}
+
+.lightPink {
+    background-color: lightpink;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+div.hotPink > div.container {
+    
+    padding: 15px;
+}
+
+span.info {
+    font-size: larger;
+    margin: 10px;
+}
+
+.course {
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.m-10 {
+    margin: 15px 10px;
+}
+
+.mB-5 {
+    margin-bottom: 5px;
+}
+
+.fW-4 {
+    font-weight: 400;
+}
+
+@media screen and (min-width: 750px) {
+    .center {
+        margin: auto;
+        width: 50%;
+    }
+
+    p.info {
+        font-size: smaller;
+        font-weight: 600;
+        margin-top:2px;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (min-width: 1488px) {
+ 
+    .lightPink{
+        height: 66%;
+    }
+  }
+
+@media screen and (min-width: 1600px) {
+    .container-fluid{
+        height: 100%;
+    }
+    #sidebar{
+        height: 100%;
+    }
+    .lightPink{
+        height: 68%;
+    }
+}
