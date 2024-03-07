@@ -289,3 +289,47 @@ traceroute google.com
 nmap google.com                                                                                          
 man ssh                                                                                                  
 exit  
+cd ~
+ls
+cd snap
+ls
+mkdir cliPractice
+ls
+cd cliPractice
+touch practice.txt
+code practice.txt
+wc -l practice.txt
+cp practice.txt practice1.txt
+ls
+cat practice1.txt
+rm practice1.txt
+ls
+mkdir rmdirc
+ls
+rmdir rmdir
+rmdir rmdirc
+ls
+mkdir demo
+ls
+cp practice.txt demo/practice1.txt
+ls
+cd demo
+ls
+cp practice1.txt pracitce2.txt
+ls
+mv practice1.text ../
+mv practice1.txt ../
+ls
+cd ../
+ls
+ls | wc -l
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+npm install prettier
+npx prettier
+npm install prettier
+cat ~/.bash_history
+cd ~
+ls
+cat ~/.bash_history
