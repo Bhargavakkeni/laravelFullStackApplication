@@ -72,6 +72,10 @@ th {
     text-align: center;
 }
 
+.f-20{
+    font-size: 20px;
+}
+
 .px5{
     padding: 2px;
 }
@@ -79,7 +83,7 @@ th {
 @media screen and (min-width: 750px) {
     div.center{
         margin: auto;
-        width: 50%;
+        width: 70%;
     }
     div.column{
         flex-direction: row;
