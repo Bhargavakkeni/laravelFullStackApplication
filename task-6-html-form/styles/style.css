@@ -1,0 +1,30 @@
+input {
+    margin: 5px;
+    padding: 5px;
+}
+
+label {
+    margin: 4px;
+    padding: 4px;
+}
+
+body {
+    margin: 20px;
+    padding: 5px;
+}
+
+div {
+    margin: auto;
+    width: 50%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    font-size: larger;
+    width: 150px;
+    height: 36px;
+}
+
+.red{
+    color: red;
+}
