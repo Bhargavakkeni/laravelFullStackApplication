@@ -1,9 +1,8 @@
-
 body {
     margin: 10px;
     padding: 5px;
-    
-   
+
+
 }
 
 
@@ -43,7 +42,7 @@ div.p5>ul {
     display: flex;
 }
 
-#photograph{
+#photograph {
     width: -webkit-fill-available;
 }
 
@@ -53,7 +52,7 @@ div.p5>ul {
     word-break: break-word;
 }
 
-div.column{
+div.column {
     flex-direction: column;
 }
 
@@ -72,23 +71,25 @@ th {
     text-align: center;
 }
 
-.f-20{
+.f-20 {
     font-size: 20px;
 }
 
-.px5{
+.px5 {
     padding: 2px;
 }
 
 @media screen and (min-width: 750px) {
-    div.center{
+    div.center {
         margin: auto;
         width: 70%;
     }
-    div.column{
+
+    div.column {
         flex-direction: row;
     }
-    div.px5{
+
+    div.px5 {
         padding-left: 3rem;
         padding-right: 3rem;
     }

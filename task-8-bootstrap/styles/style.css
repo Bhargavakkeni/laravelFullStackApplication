@@ -5,13 +5,13 @@
     margin: auto;
 }
 
-.horizontal-slash{
+.horizontal-slash {
     border: 1px solid black;
     width: 20px;
     margin-left: 8px;
 }
 
-.horizontal-slash-m{
+.horizontal-slash-m {
     border: 1px solid black;
     width: 30px;
     margin: 3px;
@@ -31,7 +31,7 @@ div.D-flex ul {
 
 div.D-flex li {
     margin: 15px 10px;
-    
+
 }
 
 
@@ -154,41 +154,43 @@ body {
     background-color: #FFF4EA;
     color: #2343b1;
 }
-.sidebar{
+
+.sidebar {
     display: flex;
     flex-direction: row;
 }
-.row-cols-3 > *{
+
+.row-cols-3>* {
     width: 100%;
 }
 
-.bg-white{
+.bg-white {
     background-color: white;
 }
 
-.hid{
+.hid {
     display: none;
 }
 
-.fb-100{
+.fb-100 {
     flex-basis: 100%;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: flex;
     align-items: center;
 }
 
-.w-100{
+.w-100 {
     width: 100%;
 }
 
 @media screen and (max-width: 768px) {
- /* for smaller devices*/
-  }
+    /* for smaller devices*/
+}
 
 @media screen and (min-width: 769px) {
-    .sidebar{
+    .sidebar {
         display: block;
         padding: 0;
         margin: 30px 5px;
@@ -199,21 +201,25 @@ body {
         padding: 2px;
     }
 
-    .row-cols-3 > *{
+    .row-cols-3>* {
         width: 33.33%;
     }
+
     .h-680 {
         height: 680px;
     }
-    .w-71{
+
+    .w-71 {
         width: 71px;
     }
-    .hid{
+
+    .hid {
         display: inline;
     }
-    #navbarSupportedContent > ul{
+
+    #navbarSupportedContent>ul {
         width: 100%;
-    display: flex;
-    align-items: center;
+        display: flex;
+        align-items: center;
     }
 }

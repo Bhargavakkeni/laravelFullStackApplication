@@ -80,8 +80,8 @@ span.sideHeader>p {
     padding-top: 20px;
 }
 
-div.hotPink > div.container {
-    
+div.hotPink>div.container {
+
     padding: 15px;
 }
 
@@ -117,26 +117,28 @@ span.info {
     p.info {
         font-size: smaller;
         font-weight: 600;
-        margin-top:2px;
+        margin-top: 2px;
         word-wrap: break-word;
     }
 }
 
 @media screen and (min-width: 1488px) {
- 
-    .lightPink{
+
+    .lightPink {
         height: 66%;
     }
-  }
+}
 
 @media screen and (min-width: 1600px) {
-    .container-fluid{
+    .container-fluid {
         height: 100%;
     }
-    #sidebar{
+
+    #sidebar {
         height: 100%;
     }
-    .lightPink{
+
+    .lightPink {
         height: 68%;
     }
 }
