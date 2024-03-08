@@ -176,6 +176,7 @@ body {
 
 #nav-toggle{
     display: flex;
+    align-items: center;
 }
 
 .w-100{
