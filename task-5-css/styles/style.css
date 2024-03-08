@@ -108,10 +108,14 @@ span.info {
     font-weight: 400;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1069px) {
     .center {
         margin: auto;
-        width: 50%;
+        width: 60%;
     }
 
     p.info {
@@ -139,6 +143,6 @@ span.info {
     }
 
     .lightPink {
-        height: 68%;
+        height: 65%;
     }
 }
