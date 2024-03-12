@@ -28,25 +28,24 @@
     </div>
   </div>
   <div class="container center mt-25">
-    <table class="table table-hover">
+    <table class="table table-hover" id="userTable">
       <thead>
         <tr>
           <th scope="col">User</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
-      <tbody id="userTable"></tbody>
     </table>
     <div class="row">
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link">Previous</a>
+          <li class="page-item disabled" id="prevEnable">
+            <a class="page-link" href="#" onclick="return handlePage('previous')" id="previous">Previous</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+          <li class="page-item"><a class="page-link" href="#page1" onclick="return handlePage(1)">1</a></li>
+          <li class="page-item"><a class="page-link" href="#page2" onclick="return handlePage(2)">2</a></li>
+          <li class="page-item" id="nexEnable">
+            <a class="page-link" href="#" onclick="return handlePage('next')" id="next">Next</a>
           </li>
         </ul>
       </nav>

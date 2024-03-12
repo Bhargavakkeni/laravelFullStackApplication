@@ -10,3 +10,12 @@ td>span {
 .mt-25 {
     margin-top: 25px;
 }
+
+span{
+    color:#0d6efd;
+}
+
+a:active{
+    background-color: #0d6efd;
+    color: white;
+}
