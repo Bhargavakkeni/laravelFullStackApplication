@@ -1,7 +1,12 @@
-td > span {
-cursor: pointer;
+td>span {
+    cursor: pointer;
 }
 
-div.modal-body > table {
-    width: 100%;
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.mt-25 {
+    margin-top: 25px;
 }

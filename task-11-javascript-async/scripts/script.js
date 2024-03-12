@@ -1,6 +1,7 @@
 
 const handleStart = async () => {
     var userTable = document.getElementById('userTable');
+    var row_count = 0, page_count = 1;
     try {
         const response = await fetch('https://gorest.co.in/public/v2/users');
         if (!response.ok) {
@@ -12,6 +13,14 @@ const handleStart = async () => {
             console.log('Fetched data successfuly');
 
             for (i of data) {
+
+                if(row_count == 5){
+                    userTable.setAttribute('id', `page${1}`);
+                    row_count = 1;
+                    page_count++;
+                } else {
+                    row_count++;
+                }
                 userTable.innerHTML += `
                 <tr>
                     <td>${i.name}</td>
@@ -27,7 +36,7 @@ const handleStart = async () => {
             }
 
         } else {
-            console.log('While fetching the data');
+            console.log('Error occured while fetching the data');
             return false;
         }
     } catch (error) {
@@ -39,29 +48,28 @@ const handleStart = async () => {
 
 handleStart();
 
-async function handleAction(id){
+async function handleAction(id) {
     var content = document.getElementById('content');
     content.innerHTML = '';
-    try{
+    try {
         const response = await fetch(`https://gorest.co.in/public/v2/users/${id}`);
 
-        if(!response.ok){
+        if (!response.ok) {
             throw new Error(`error: ${response.status}`);
         }
 
         const data = await response.json();
 
-        if(data){
-            var row = `<tr>`;
-            for(i in data){
-                row += `<td>${data[i]}</td>`;
+        if (data) {
+            for (i in data) {
+                content.innerHTML += `<dt>${i}</dt><dd>${data[i]}</dd>`;
             }
-            row += `</tr>`;
-            content.innerHTML += row;
+
+
         } else {
             throw new Error('Error while fetching the data');
         }
-    } catch(error) {
+    } catch (error) {
         console.log('Error', error);
     }
 }
