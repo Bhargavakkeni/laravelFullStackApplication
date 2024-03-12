@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Index</title>
+</head>
+
+<body>
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">User Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <dl id="content"></dl>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container center mt-25">
+    <table class="table table-hover" id="userTable">
+      <thead>
+        <tr>
+          <th scope="col">User</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+    </table>
+    <div class="row">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled" id="prevEnable">
+            <a class="page-link" href="#" onclick="return handlePage('previous')" id="previous">Previous</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#page1" onclick="return handlePage(1)">1</a></li>
+          <li class="page-item"><a class="page-link" href="#page2" onclick="return handlePage(2)">2</a></li>
+          <li class="page-item" id="nexEnable">
+            <a class="page-link" href="#" onclick="return handlePage('next')" id="next">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

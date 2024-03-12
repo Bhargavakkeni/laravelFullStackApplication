@@ -1,0 +1,21 @@
+td>span {
+    cursor: pointer;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+span {
+    color: #0d6efd;
+}
+
+table#userTable td {
+    padding: 20px 2px;
+    color: #0d6efd;
+}
