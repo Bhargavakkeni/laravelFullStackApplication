@@ -15,7 +15,6 @@ span{
     color:#0d6efd;
 }
 
-a:active{
-    background-color: #0d6efd;
-    color: white;
+table#userTable td {
+    padding: 20px 2px;
 }
