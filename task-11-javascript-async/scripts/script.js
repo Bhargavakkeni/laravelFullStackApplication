@@ -4,6 +4,7 @@ var userTable = document.getElementById('userTable');
 var tbody = document.createElement('tbody');
 var page_count = 1;
 
+/*To fetch entire data and display first five record names.*/
 const handleFetch = async () => {
     try {
         const response = await fetch('https://gorest.co.in/public/v2/users');
@@ -30,6 +31,7 @@ const handleFetch = async () => {
 
 }
 
+/*To handle view more action display additional details associated with id*/
 async function handleAction(id) {
     var content = document.getElementById('content');
     content.innerHTML = '';
@@ -44,7 +46,7 @@ async function handleAction(id) {
 
         if (data) {
             for (i in data) {
-                content.innerHTML += `<dt>${i}</dt><dd>${data[i]}</dd>`;
+                content.innerHTML += `<dt>${i.charAt(0).toUpperCase() + i.slice(1)}</dt><dd>${data[i]}</dd>`;
             }
 
 
@@ -56,8 +58,8 @@ async function handleAction(id) {
     }
 }
 
+/*Generate rows for the userTable*/
 function handleRows(total_entries) {
-    console.log('handleRows', total_entries);
     var rows = ``;
     for (j of total_entries) {
         rows += `
@@ -76,11 +78,13 @@ function handleRows(total_entries) {
     return rows;
 }
 
+/*To handle pagination*/
 function handlePage(page) {
     var previous = document.getElementById('previous');
     var next = document.getElementById('next');
     var prevEnable = document.getElementById('prevEnable');
     var nexEnable = document.getElementById('nexEnable');
+
 
     if (page == 1) {
         prevEnable.setAttribute('class', 'page-item disabled');
@@ -103,6 +107,12 @@ function handlePage(page) {
         tbody.innerHTML += handleRows(total_entries);
         tbody.setAttribute('id', `page${page_count}`);
         current_page = page;
+
+        var pageLinks = document.querySelectorAll('.pagination .page-item');
+        pageLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        pageLinks[page].classList.add('active');
 
     } else if (page == 'previous') {
         current_page--;
