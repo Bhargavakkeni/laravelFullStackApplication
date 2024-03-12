@@ -1,0 +1,7 @@
+td > span {
+cursor: pointer;
+}
+
+div.modal-body > table {
+    width: 100%;
+}
