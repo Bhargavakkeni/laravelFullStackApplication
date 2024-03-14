@@ -3,17 +3,38 @@ var current_page = 1;
 var userTable = document.getElementById('userTable');
 var tbody = document.createElement('tbody');
 var page_count = 1;
+var pages_required;
 
 /*To fetch entire data and display first five record names.*/
 const handleFetch = async () => {
+    var pagination = document.getElementById('pagination');
+    var nexEnable = document.getElementById('nexEnable');
     try {
         const response = await fetch('https://gorest.co.in/public/v2/users');
         if (!response.ok) {
             throw new Error(`error:${response.status}`);
         }
         data = await response.json();
+
         if (data) {
             console.log('Fetched data successfuly');
+            
+            pages_required = Math.ceil(data.length / 5);
+            for(var p = 1; p <= pages_required; p++){
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.setAttribute('class', 'page-link');
+                if(p == 1){
+                    li.setAttribute('class', 'page-item active');
+                } else {
+                    li.setAttribute('class', 'page-item');
+                }
+                a.setAttribute('onclick', `return handlePage(${p})`);
+                a.setAttribute('href', `#page${p}`);
+                a.innerHTML =  p
+                li.appendChild(a);
+                pagination.insertBefore(li, nexEnable);
+            } 
 
             let total_entries = data.slice(0, 5);
             tbody.innerHTML += handleRows(total_entries);
