@@ -1,6 +1,6 @@
 
 function handleSplit() {
-/* handleSplit() function splits a number into number of times of another given nubmer and
+/* handleSplit() function splits a number into number of times of another given number and
  appends a div with respective widths.*/
 
     var number1 = document.getElementById('number1').value;
