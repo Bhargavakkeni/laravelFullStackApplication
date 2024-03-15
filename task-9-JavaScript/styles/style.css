@@ -14,6 +14,7 @@ body {
 #result {
     display: flex;
     flex-direction: row;
+    overflow: auto;
 }
 
 label {
