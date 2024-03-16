@@ -18,23 +18,23 @@ const handleFetch = async () => {
 
         if (data) {
             console.log('Fetched data successfuly');
-            
+
             pages_required = Math.ceil(data.length / 5);
-            for(var p = 1; p <= pages_required; p++){
+            for (var p = 1; p <= pages_required; p++) {
                 var li = document.createElement('li');
                 var a = document.createElement('a');
                 a.setAttribute('class', 'page-link');
-                if(p == 1){
+                if (p == 1) {
                     li.setAttribute('class', 'page-item active');
                 } else {
                     li.setAttribute('class', 'page-item');
                 }
                 a.setAttribute('onclick', `return handlePage(${p})`);
                 a.setAttribute('href', `#page${p}`);
-                a.innerHTML =  p
+                a.innerHTML = p
                 li.appendChild(a);
                 pagination.insertBefore(li, nexEnable);
-            } 
+            }
 
             let total_entries = data.slice(0, 5);
             tbody.innerHTML += handleRows(total_entries);
