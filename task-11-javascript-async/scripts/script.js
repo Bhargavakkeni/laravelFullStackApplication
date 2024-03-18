@@ -123,6 +123,11 @@ function handlePage(page) {
         var end, start;
         end = page * 5;
         start = end - 5;
+
+        if(end > data.length){
+            end = data.length;
+        }
+
         total_entries = data.slice(start, end);
         tbody.innerHTML = '';
         tbody.innerHTML += handleRows(total_entries);
