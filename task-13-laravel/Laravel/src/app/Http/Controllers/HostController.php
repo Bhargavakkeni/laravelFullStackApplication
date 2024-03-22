@@ -27,12 +27,14 @@ class HostController extends Controller
      */
     public function create()
     {
-        $host = new Host;
+        /*$host = new Host;
         $host->name = 'shankar';
         $host->email = 'shankar123@gmail.com';
         $host->gender = 'male';
         $host->save();
-        echo "Created successfuly";
+        echo "Created successfuly";*/
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
 
     }
 
@@ -60,7 +62,8 @@ class HostController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
     }
 
     /**
@@ -71,7 +74,8 @@ class HostController extends Controller
      */
     public function edit($id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
     }
 
     /**
@@ -83,7 +87,8 @@ class HostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
     }
 
     /**

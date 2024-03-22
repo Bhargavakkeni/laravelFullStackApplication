@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
     }
 
     /**
@@ -53,7 +53,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
     }
 
     /**
@@ -64,7 +64,8 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
     }
 
     /**
@@ -76,7 +77,8 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return response()->json(['error'=>'Method Not Allowed'], 405);
+
     }
 
     /**
