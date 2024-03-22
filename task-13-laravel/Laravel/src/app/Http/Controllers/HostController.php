@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Host;
 
 
@@ -16,7 +17,7 @@ class HostController extends Controller
     public function index()
     {
         $host = Host::all();
-        
+
         return response($host, 200);
     }
 
@@ -33,7 +34,7 @@ class HostController extends Controller
         $host->gender = 'male';
         $host->save();
         echo "Created successfuly";*/
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
 
     }
@@ -62,7 +63,7 @@ class HostController extends Controller
      */
     public function show($id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
     }
 
@@ -74,7 +75,7 @@ class HostController extends Controller
      */
     public function edit($id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
     }
 
@@ -87,7 +88,7 @@ class HostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
     }
 
@@ -100,8 +101,8 @@ class HostController extends Controller
     public function destroy($id)
     {
         $host = Host::find($id);
-        if($host === null){
-            return response()->json(['error'=>'Not Found'], 404);
+        if ($host === null) {
+            return response()->json(['error' => 'Not Found'], 404);
         }
         $host->delete();
         return response()->json(['Deleted successfuly'], 200);

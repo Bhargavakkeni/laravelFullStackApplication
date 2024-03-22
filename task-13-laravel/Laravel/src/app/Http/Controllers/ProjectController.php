@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
     }
 
     /**
@@ -53,7 +53,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
     }
 
     /**
@@ -64,7 +64,7 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
     }
 
@@ -77,7 +77,7 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->json(['error'=>'Method Not Allowed'], 405);
+        return response()->json(['error' => 'Method Not Allowed'], 405);
 
     }
 
@@ -90,8 +90,8 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         $project = Project::find($id);
-        if($project === null){
-            return response(['error'=>'Not Found'], 404);
+        if ($project === null) {
+            return response(['error' => 'Not Found'], 404);
         }
         $project->delete();
         return response(['Deleted Successfuly'], 200);
