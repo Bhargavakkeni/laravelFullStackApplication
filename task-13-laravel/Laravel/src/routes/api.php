@@ -34,3 +34,5 @@ Route::resource('host/users', 'App\Http\Controllers\HostController');
 Route::resource('host/projects', 'App\Http\Controllers\ProjectController');
 
 Route::get('/host/user/{user_id}/projects', 'App\Http\Controllers\GetProjectsController@getProjects');
+
+//Route::get('/users','App\Http\Controllers\GetUsersController@index');

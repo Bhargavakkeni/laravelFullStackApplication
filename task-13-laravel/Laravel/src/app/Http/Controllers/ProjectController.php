@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
+use App\Models\Host;
 
 class ProjectController extends Controller
 {
@@ -15,7 +16,7 @@ class ProjectController extends Controller
     public function index()
     {
         $project = Project::all();
-
+        
         return response($project, 200);
     }
 
@@ -53,7 +54,17 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $user = Host::find($id);
+        $project_array = [];
+        if ($user === null) {
+            return response()->json(['error' => 'Not Found'], 404);
+        } else {
+            foreach ($user->projects as $project) {
+                array_push($project_array, $project);
+            }
+            //return response()->json($project_array);
+        }
+        return view('projects.index', compact('project_array'));
     }
 
     /**
@@ -87,13 +98,14 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($project)
     {
+        list($id, $user_id) = explode('-', $project);
         $project = Project::find($id);
         if ($project === null) {
             return response(['error' => 'Not Found'], 404);
         }
         $project->delete();
-        return response(['Deleted Successfuly'], 200);
+        return to_route('projects.show', $user_id);
     }
 }

@@ -16,9 +16,10 @@ class HostController extends Controller
      */
     public function index()
     {
-        $host = Host::all();
+        $users = Host::paginate(5);
 
-        return response($host, 200);
+        return view('users.index',compact('users'))
+            ->with(request()->input('page'));
     }
 
     /**
@@ -63,7 +64,8 @@ class HostController extends Controller
      */
     public function show($id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $user = Host::find($id);
+        return response($user);
 
     }
 
@@ -88,7 +90,19 @@ class HostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $request->validate([
+            'id'=>'required',
+            'name'=>'required',
+            'email'=>'required',
+            'gender'=>'required',
+        ]);
+        $user = Host::find($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->gender = $request->get('gender');
+        $user->save();
+        return to_route('users.index');
+        
 
     }
 
@@ -105,6 +119,6 @@ class HostController extends Controller
             return response()->json(['error' => 'Not Found'], 404);
         }
         $host->delete();
-        return response()->json(['Deleted successfuly'], 200);
+        return to_route('users.index');
     }
 }
