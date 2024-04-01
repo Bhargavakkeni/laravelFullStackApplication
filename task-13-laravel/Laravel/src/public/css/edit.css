@@ -1,5 +1,3 @@
-
-
 .m-40 {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -10,16 +8,16 @@
     margin-left: 10px;
 }
 
-.red{
+.red {
     color: red;
 }
 
-.right{
+.right {
     float: right;
 }
 
 @media (min-width: 768px) {
-    .center{
+    .center {
         margin: auto;
         width: 50%;
     }

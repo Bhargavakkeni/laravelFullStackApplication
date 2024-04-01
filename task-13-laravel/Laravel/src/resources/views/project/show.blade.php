@@ -6,11 +6,48 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 @endsection
 @section('content')
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel">Create a Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form method="post" action="{{ route('projects.store') }}">
+                            @csrf
+                            </br>
+                            <label for="user_id">User Id <span class="red">*</span></label>
+                            <input type="number" name="user_id" id="user_id" class="form-control" autofocus required>
+                            </br>
+                            <label for="title">Title <span class="red">*</span></label>
+                            <input type="text" name="title" class="form-control" id="title" required>
+                            </br>
+                            <label for="description">Description <span class="red">*</span></label>
+                            <textarea name="description" class="form-control" id="description" required> 
+                            </textarea>
+                            </br>
+                            <input type="submit" class="btn btn-success">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container center mt-25">
         <div class="row create">
             <div class="col">
-                <a href="{{ route('projects.create', ['user_id' => $user_id]) }}" class="btn btn-success right m-1"
-                    type="submit" target="_blank">Create</a>
+                {{-- <a href="{{ route('projects.create', ['user_id' => $user_id]) }}" class="btn btn-success right m-1"
+                    type="submit" target="_blank">Create</a> --}}
+
+                <button class="btn btn-success right m-1" type="submit" data-bs-toggle="modal"
+                    data-bs-target="#createModal">Create</button>
                 <form action="{{ route('users.index') }}" method='GET'>
                     @csrf
                     <button class="btn btn-primary right m-1" type="submit">Back</button>

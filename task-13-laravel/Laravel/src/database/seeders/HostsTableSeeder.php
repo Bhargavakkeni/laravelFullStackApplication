@@ -16,9 +16,9 @@ class HostsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
         Host::factory(30)->create();
-        
+
         /*$faker = Faker::create('en_US');
 
         // Populate hosts table

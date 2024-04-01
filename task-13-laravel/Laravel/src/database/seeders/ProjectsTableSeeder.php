@@ -17,9 +17,9 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
         Project::factory(30)->create();
-        
+
         /*$faker = Faker::create('en_US');
 
         // Populate projects table with random user_id referencing Hosts table's id

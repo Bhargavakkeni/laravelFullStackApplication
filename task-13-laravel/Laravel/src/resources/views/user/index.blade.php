@@ -23,12 +23,56 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel">Create a User</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form method="post" action="{{ route('users.store') }}" name="createForm" id="createForm">
+                            @csrf
+                            <label for="name">Name <span class="red">*</span></label>
+                            <input type="text" name="name" class="form-control" id="name" autofocus required>
+                            </br>
+                            <label for=email>Email <span class="red">*</span></label>
+                            <input type="email" name="email" class="form-control" id="email" required>
+                            </br>
+                            <label for="gender">Gender <span class="red">*</span></label>
+                            </br>
+                            <div class="form-group m-10">
+                                <input type="radio" name="gender" value="male" id="male" required>
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" value="female" id="female">
+                                <label for="female">female</label>
+                            </div>
+                            </br>
+                            <input type="submit" class="btn btn-success">
+                            </br>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container center mt-25">
-        <div class="row create">
+        {{-- <div class="row create">
             <form action="{{ route('users.create') }}" method='GET' target='_blank'>
                 @csrf
                 <button class="btn btn-success right" type="submit">Create</button>
             </form>
+        </div> --}}
+        <div class="create d-grid">
+            <button class="btn btn-success js-right" type="submit" data-bs-toggle="modal"
+                data-bs-target="#createModal">Create</button>
         </div>
         <div class="table-responsive">
             <table class="table table-hover" id="userTable">

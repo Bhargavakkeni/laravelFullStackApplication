@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class HostFactory extends Factory
 {
-    
+
     //protected $model = Host::class;
     /**
      * Define the model's default state.
