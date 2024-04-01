@@ -10,7 +10,7 @@
         <div class="row m-40 m-10">
             <div class="row create">
                 <div class="right">
-                <form action="{{ route('users.index') }}" method='GET' target='_blank'>
+                <form action="{{ route('users.index') }}" method='GET'>
                     @csrf
                     <button class="btn btn-primary right" type="submit">Back</button>
                 </form>

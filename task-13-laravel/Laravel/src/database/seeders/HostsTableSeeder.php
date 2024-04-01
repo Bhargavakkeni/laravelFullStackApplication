@@ -16,7 +16,10 @@ class HostsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('en_US');
+        
+        Host::factory(30)->create();
+        
+        /*$faker = Faker::create('en_US');
 
         // Populate hosts table
         foreach (range(1, 10) as $index) {
@@ -25,6 +28,6 @@ class HostsTableSeeder extends Seeder
                 'email' => $faker->unique()->safeEmail,
                 'gender' => $faker->randomElement(['male', 'female']),
             ]);
-        }
+        }*/
     }
 }

@@ -17,7 +17,10 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('en_US');
+        
+        Project::factory(30)->create();
+        
+        /*$faker = Faker::create('en_US');
 
         // Populate projects table with random user_id referencing Hosts table's id
         $hostIds = Host::pluck('id')->toArray(); // Get all ids from Hosts table
@@ -27,6 +30,6 @@ class ProjectsTableSeeder extends Seeder
                 'description' => $faker->paragraph,
                 'user_id' => $faker->randomElement($hostIds), // Randomly select a host id
             ]);
-        }
+        }*/
     }
 }

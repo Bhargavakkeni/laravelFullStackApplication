@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title')
-    <title>Projects</title>
+    <title>Show Projects</title>
 @endsection
 @section('link')
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
@@ -25,10 +25,14 @@
     </div>
     <div class="container center mt-25">
         <div class="row create">
-            <form action="{{ route('projects.create') }}" method='GET' target="_blank">
-                @csrf
-                <button class="btn btn-success right" type="submit">Create</button>
-            </form>
+            <div class="col">
+                <a href="{{ route('projects.create', ['user_id' => $user_id]) }}" class="btn btn-success right m-1"
+                    type="submit" target="_blank">Create</a>
+                <form action="{{ route('users.index') }}" method='GET'>
+                    @csrf
+                    <button class="btn btn-primary right m-1" type="submit">Back</button>
+                </form>
+            </div>
         </div>
         <div class="table-responsive">
             <table class="table table-hover" id="userTable">

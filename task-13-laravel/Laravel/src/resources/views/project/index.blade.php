@@ -29,14 +29,14 @@
     <div class="container center mt-25">
         <div class="row create">
             <div class="col">
-            <form action="{{ route('projects.create') }}" method='GET' target="_blank">
-                @csrf
-                <button class="btn btn-success right m-1" type="submit">Create</button>
-            </form>
-            <form action="{{ route('users.index') }}" method='GET' target="_blank">
-                @csrf
-                <button class="btn btn-primary right m-1" type="submit">Users</button>
-            </form>
+                <form action="{{ route('projects.create') }}" method='GET' target="_blank">
+                    @csrf
+                    <button class="btn btn-success right m-1" type="submit">Create</button>
+                </form>
+                <form action="{{ route('users.index') }}" method='GET' target="_blank">
+                    @csrf
+                    <button class="btn btn-primary right m-1" type="submit">Users</button>
+                </form>
             </div>
         </div>
         <div class="table-responsive">

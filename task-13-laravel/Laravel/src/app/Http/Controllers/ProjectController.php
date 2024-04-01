@@ -26,9 +26,10 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    { 
-        return view('project.create');
+    public function create(Request $request)
+    {
+        $user_id = $request->get('user_id'); 
+        return view('project.create', compact('user_id'));
     }
 
     /**
@@ -63,6 +64,7 @@ class ProjectController extends Controller
     public function show($id)
     {
         $user = Host::find($id);
+        $user_id = $id;
         $project_array = [];
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);
@@ -72,7 +74,7 @@ class ProjectController extends Controller
             }
             //return response()->json($project_array);
         }
-        return view('project.show', compact('project_array'));
+        return view('project.show', compact('project_array', 'user_id'));
     }
 
     /**
