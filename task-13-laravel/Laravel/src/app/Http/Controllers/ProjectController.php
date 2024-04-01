@@ -30,8 +30,8 @@ class ProjectController extends Controller
     {
         $user_id = $request->get('user_id');
 
-        if($user_id === null) {
-            $user_id = '0';
+        if ($user_id === null) {
+            $user_id = 'null';
         }
 
         return view('project.create', compact('user_id'));
@@ -46,9 +46,9 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'user_id'=>'required',
-            'title'=>'required',
-            'description'=>'required'
+            'user_id' => 'required',
+            'title' => 'required',
+            'description' => 'required'
         ]);
 
         $project = new Project;
@@ -68,7 +68,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        if($id == '0'){
+        if ($id == 'null') {
             return to_route('projects.index');
         }
         $user = Host::find($id);
@@ -108,9 +108,9 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'user_id'=>'required',
-            'title'=>'required',
-            'description'=>'required'
+            'user_id' => 'required',
+            'title' => 'required',
+            'description' => 'required'
         ]);
 
         $project = Project::find($id);
