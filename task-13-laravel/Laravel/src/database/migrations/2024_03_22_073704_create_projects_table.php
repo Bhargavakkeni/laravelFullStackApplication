@@ -14,7 +14,8 @@ return new class extends Migration {
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id'); // Define user_id as an unsigned big integer
+            $table->foreign('user_id')->references('id')->on('Hosts')->onDelete('cascade'); // Define foreign key constraint
             $table->string('title');
             $table->text('description');
             $table->timestamps();

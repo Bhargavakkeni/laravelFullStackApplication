@@ -6,3 +6,7 @@
 .right{
     float: right;
 }
+
+.d-flex {
+    justify-content: center;
+}

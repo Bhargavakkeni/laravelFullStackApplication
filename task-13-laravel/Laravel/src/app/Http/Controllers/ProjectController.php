@@ -15,9 +15,10 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $project = Project::all();
-        
-        return response($project, 200);
+        $projects = Project::paginate(5);
+
+        return view('project.index', compact('projects'));
+
     }
 
     /**
@@ -26,8 +27,8 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+    { 
+        return view('project.create');
     }
 
     /**
@@ -38,12 +39,19 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'user_id'=>'required',
+            'title'=>'required',
+            'description'=>'required'
+        ]);
+
         $project = new Project;
         $project->user_id = $request->get('user_id');
         $project->title = $request->get('title');
         $project->description = $request->get('description');
         $project->save();
-        return response()->json(['Created successfuly'], 200);
+
+        return to_route('projects.show', $project->user_id);
     }
 
     /**
@@ -64,7 +72,7 @@ class ProjectController extends Controller
             }
             //return response()->json($project_array);
         }
-        return view('projects.index', compact('project_array'));
+        return view('project.show', compact('project_array'));
     }
 
     /**
@@ -75,7 +83,8 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $project = Project::find($id);
+        return view('project.edit', compact('project'));
 
     }
 
@@ -88,7 +97,19 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $request->validate([
+            'user_id'=>'required',
+            'title'=>'required',
+            'description'=>'required'
+        ]);
+
+        $project = Project::find($id);
+        $project->user_id = $request->get('user_id');
+        $project->title = $request->get('title');
+        $project->description = $request->get('description');
+        $project->save();
+
+        return to_route('projects.show', $project->user_id);
 
     }
 

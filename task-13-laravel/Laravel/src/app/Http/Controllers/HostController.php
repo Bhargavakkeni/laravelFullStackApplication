@@ -18,7 +18,7 @@ class HostController extends Controller
     {
         $users = Host::paginate(5);
 
-        return view('users.index',compact('users'))
+        return view('user.index', compact('users'))
             ->with(request()->input('page'));
     }
 
@@ -29,13 +29,14 @@ class HostController extends Controller
      */
     public function create()
     {
+        return view('user.create');
         /*$host = new Host;
         $host->name = 'shankar';
         $host->email = 'shankar123@gmail.com';
         $host->gender = 'male';
         $host->save();
-        echo "Created successfuly";*/
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        echo "Created successfuly";
+        return response()->json(['error' => 'Method Not Allowed'], 405);*/
 
 
     }
@@ -48,12 +49,18 @@ class HostController extends Controller
      */
     public function store(Request $request)
     {
-        $host = new Host;
-        $host->name = $request->get('name');
-        $host->email = $request->get('email');
-        $host->gender = $request->get('gender');
-        $host->save();
-        return response()->json(['Created successfuly'], 200);
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'gender' => 'required'
+        ]);
+
+        $user = new Host;
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->gender = $request->get('gender');
+        $user->save();
+        return to_route('users.index');
     }
 
     /**
@@ -77,7 +84,9 @@ class HostController extends Controller
      */
     public function edit($id)
     {
-        return response()->json(['error' => 'Method Not Allowed'], 405);
+        $user = Host::find($id);
+
+        return view('user.edit', compact('user'));
 
     }
 
@@ -91,10 +100,9 @@ class HostController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'id'=>'required',
-            'name'=>'required',
-            'email'=>'required',
-            'gender'=>'required',
+            'name' => 'required',
+            'email' => 'required',
+            'gender' => 'required'
         ]);
         $user = Host::find($id);
         $user->name = $request->get('name');
@@ -102,7 +110,7 @@ class HostController extends Controller
         $user->gender = $request->get('gender');
         $user->save();
         return to_route('users.index');
-        
+
 
     }
 
