@@ -28,7 +28,12 @@ class ProjectController extends Controller
      */
     public function create(Request $request)
     {
-        $user_id = $request->get('user_id'); 
+        $user_id = $request->get('user_id');
+
+        if($user_id === null) {
+            $user_id = '0';
+        }
+
         return view('project.create', compact('user_id'));
     }
 
@@ -63,6 +68,9 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
+        if($id == '0'){
+            return to_route('projects.index');
+        }
         $user = Host::find($id);
         $user_id = $id;
         $project_array = [];

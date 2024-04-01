@@ -25,7 +25,7 @@
                     <input type="number" value="{{ $project->user_id }}" name="user_id" id="user_id" class="form-control"
                         readonly required>
                     </br>
-                    <label for="name">Title <span class="red">*</span></label>
+                    <label for="title">Title <span class="red">*</span></label>
                     <input type="text" name="title" value="{{ $project->title }}" class="form-control" id="title"
                         autofocus required>
                     </br>

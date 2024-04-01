@@ -21,9 +21,9 @@
                     @csrf
                     </br>
                     <label for="user_id">User Id <span class="red">*</span></label>
-                    <input type="number" name="user_id" value="{{ $user_id }}" id="user_id" class="form-control" autofocus required>
+                    <input type="number" name="user_id" value="{{ $user_id or '' }}" id="user_id" class="form-control" autofocus required>
                     </br>
-                    <label for="name">Title <span class="red">*</span></label>
+                    <label for="title">Title <span class="red">*</span></label>
                     <input type="text" name="title" class="form-control" id="title" required>
                     </br>
                     <label for="description">Description <span class="red">*</span></label>
