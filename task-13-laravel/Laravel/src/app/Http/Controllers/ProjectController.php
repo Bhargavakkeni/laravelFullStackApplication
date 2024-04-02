@@ -71,16 +71,20 @@ class ProjectController extends Controller
         if ($id == 'null') {
             return to_route('projects.index');
         }
+        
         $user = Host::find($id);
         $project_array = [];
+
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);
         } /*else {
             foreach ($user->projects as $project) {
-                array_push($project_array, $project);
+               array_push($project_array, $project);
             }
         }*/
+        
         $projects = $user->projects()->paginate(5);
+        
         return view('project.show', compact('projects', 'user'));
     }
 

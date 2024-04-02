@@ -17,6 +17,7 @@ class Host extends Model
         'gender'
     ];
 
+    
     public function projects()
     {
         return $this->hasMany('App\Models\Project', 'user_id');
