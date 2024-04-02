@@ -75,13 +75,13 @@ class ProjectController extends Controller
         $project_array = [];
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);
-        } else {
+        } /*else {
             foreach ($user->projects as $project) {
                 array_push($project_array, $project);
             }
-
-        }
-        return view('project.show', compact('project_array', 'user'));
+        }*/
+        $projects = $user->projects()->paginate(5);
+        return view('project.show', compact('projects', 'user'));
     }
 
     /**
