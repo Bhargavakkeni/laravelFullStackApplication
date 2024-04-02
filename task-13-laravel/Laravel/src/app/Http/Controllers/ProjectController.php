@@ -72,7 +72,6 @@ class ProjectController extends Controller
             return to_route('projects.index');
         }
         $user = Host::find($id);
-        $user_id = $id;
         $project_array = [];
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);
@@ -80,9 +79,9 @@ class ProjectController extends Controller
             foreach ($user->projects as $project) {
                 array_push($project_array, $project);
             }
-            //return response()->json($project_array);
+
         }
-        return view('project.show', compact('project_array', 'user_id'));
+        return view('project.show', compact('project_array', 'user'));
     }
 
     /**

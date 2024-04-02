@@ -54,6 +54,9 @@
                 </form>
             </div>
         </div>
+
+        <h2 class="red"> Projects of {{ $user->name  }}</h2>
+        
         <div class="table-responsive">
             <table class="table table-hover" id="userTable">
                 <thead>
