@@ -30,6 +30,7 @@ class HostController extends Controller
     public function create()
     {
         return view('user.create');
+        
         /*$host = new Host;
         $host->name = 'shankar';
         $host->email = 'shankar123@gmail.com';
