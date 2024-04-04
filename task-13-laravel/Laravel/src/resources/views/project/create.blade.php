@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
 @endsection
 @section('content')
+
+<div class="container">
+    @if(session()->has('error'))
+        <div class="alert alert-info">
+            <p>{{ session('error') }}</p>
+        </div>
+    @endif
+</div>
     <div class="container center">
         <div class="row  m-40 m-10">
             <div class="row create">

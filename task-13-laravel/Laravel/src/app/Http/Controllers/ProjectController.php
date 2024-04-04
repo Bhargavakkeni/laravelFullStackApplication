@@ -54,6 +54,7 @@ class ProjectController extends Controller
         $user = Host::find($request->get('user_id'));
 
         if ($user === null) {
+            session()->flash('error', 'user not found');
             return view('project.create');
         }
 
