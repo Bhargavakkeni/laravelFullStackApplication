@@ -28,8 +28,7 @@
                     <input type="text" name="title" class="form-control" id="title" required>
                     </br>
                     <label for="description">Description <span class="red">*</span></label>
-                    <textarea name="description" class="form-control" id="description" required> 
-                </textarea>
+                    <textarea name="description" class="form-control" id="description" required></textarea>
                     </br>
                     <input type="submit" class="btn btn-success">
                 </form>
