@@ -19,10 +19,10 @@
                             @csrf
                             </br>
                             <label for="user_id">User Id <span class="red">*</span></label>
-                            <input type="number" name="user_id" value="{{ $user->id }}" id="user_id" class="form-control" autofocus required>
+                            <input type="number" name="user_id" value="{{ $user->id }}" id="user_id" class="form-control" readonly required>
                             </br>
                             <label for="title">Title <span class="red">*</span></label>
-                            <input type="text" name="title" class="form-control" id="title" required>
+                            <input type="text" name="title" class="form-control" id="title" required autofocus>
                             </br>
                             <label for="description">Description <span class="red">*</span></label>
                             <textarea name="description" class="form-control" id="description" required></textarea>
@@ -110,8 +110,7 @@
                                     @method('put')
                                     </br>
                                     <label for="user_id">User Id <span class="red">*</span></label>
-                                    <input type="number" value="{{ $project->user_id }}" name="user_id" id="user_id" class="form-control"
-                                        readonly required>
+                                    <input type="number" value="{{ $project->user_id }}" name="user_id" id="user_id" class="form-control" required readonly>
                                     </br>
                                     <label for="title">Title <span class="red">*</span></label>
                                     <input type="text" name="title" value="{{ $project->title }}" class="form-control" id="title"
