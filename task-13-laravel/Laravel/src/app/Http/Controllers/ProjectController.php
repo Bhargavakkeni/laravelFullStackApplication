@@ -51,6 +51,12 @@ class ProjectController extends Controller
             'description' => 'required'
         ]);
 
+        $user = Host::find($request->get('user_id'));
+
+        if ($user === null) {
+            return view('project.create');
+        }
+
         $project = new Project;
         $project->user_id = $request->get('user_id');
         $project->title = $request->get('title');

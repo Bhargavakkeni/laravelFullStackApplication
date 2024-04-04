@@ -21,7 +21,7 @@
                     @csrf
                     </br>
                     <label for="user_id">User Id <span class="red">*</span></label>
-                    <input type="number" name="user_id" value="{{ $user_id ?? '' }}" id="user_id" class="form-control"
+                    <input type="number" name="user_id" id="user_id" class="form-control"
                         autofocus required>
                     </br>
                     <label for="title">Title <span class="red">*</span></label>
