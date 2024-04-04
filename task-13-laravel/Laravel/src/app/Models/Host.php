@@ -9,7 +9,7 @@ class Host extends Model
 {
     use HasFactory;
 
-    protected $table = 'Hosts';
+    protected $table = 'hosts';
     protected $primaryKey = 'id';
     protected $fillable = [
         'name',
