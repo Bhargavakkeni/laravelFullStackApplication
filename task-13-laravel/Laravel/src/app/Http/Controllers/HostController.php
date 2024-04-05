@@ -61,6 +61,7 @@ class HostController extends Controller
         $user->email = $request->get('email');
         $user->gender = $request->get('gender');
         $user->save();
+        
         return to_route('users.index');
     }
 
