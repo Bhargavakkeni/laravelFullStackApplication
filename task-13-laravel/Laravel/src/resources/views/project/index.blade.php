@@ -27,7 +27,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">user_id</th>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
                         <th scope="col">Action</th>
@@ -37,7 +36,6 @@
                     @foreach ($projects as $project)
                         <tr>
                             <td>{{ $project->id }}</td>
-                            <td>{{ $project->user_id }}</td>
                             <td>{{ $project->title }}</td>
                             <td>{{ $project->description }}</td>
                             <td>
