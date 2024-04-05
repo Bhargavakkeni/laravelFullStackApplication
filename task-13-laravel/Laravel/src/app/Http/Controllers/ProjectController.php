@@ -80,7 +80,6 @@ class ProjectController extends Controller
         }
         
         $user = Host::find($id);
-        $project_array = [];
 
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);

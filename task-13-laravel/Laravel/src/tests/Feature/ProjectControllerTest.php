@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Testing\Fluent\AssertableJson;
 use Tests\TestCase;
+use App\Models\Project;
+use App\Models\Host;
 
 class ProjectControllerTest extends TestCase
 {
@@ -72,4 +74,33 @@ class ProjectControllerTest extends TestCase
         $response->assertRedirect('host/projects/4');
 
     }
+
+
+    public function testStoreMethodWhenUserNotFound()
+    {
+      
+        $response = $this->post('/host/projects', [
+            'user_id' => 999,
+            'title' => 'Test Project',
+            'description' => 'Test project description',
+        ]);
+        $response->assertStatus(200);
+
+        $response->assertSessionHas('error', 'user not found');
+    }
+
+
+
+    /*public function testShowMethodWithProjectsAndUser()
+    {
+        //when testing this function comment the links in the project.show   
+        $host = Host::factory()->create();
+        $projects = Project::factory()->count(3)->create(['user_id' => $host->id]);
+        $view = $this->view('project.show', ['projects' => $projects, 'user' => $host]);
+        
+        foreach ($projects as $project) {
+            $view->assertSee($project->name);
+        }
+    }*/
+
 }
