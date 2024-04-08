@@ -7,9 +7,9 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\User;
 
-class HostControllerTest extends TestCase
-{
 
+class UserControllerTest extends TestCase
+{
     use RefreshDatabase;
 
     protected $seed = true;
