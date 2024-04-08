@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Testing\Fluent\AssertableJson;
 use Tests\TestCase;
 use App\Models\Project;
-use App\Models\Host;
+use App\Models\User;
 
 class ProjectControllerTest extends TestCase
 {
@@ -18,14 +18,14 @@ class ProjectControllerTest extends TestCase
     public function testIndexAction()
     {
 
-        $response = $this->get('host/projects');
+        $response = $this->get('projects');
         $response->assertStatus(200);
         $response->assertViewIs('project.index');
     }
 
     public function testCreateAction() {
 
-        $response = $this->get('host/projects/create');
+        $response = $this->get('projects/create');
         $response->assertStatus(200);
         $response->assertViewIs('project.create');
     }
@@ -40,22 +40,22 @@ class ProjectControllerTest extends TestCase
 
         ];
 
-        $response = $this->post('/host/projects', $data);
+        $response = $this->post('/projects', $data);
         $response->assertStatus(302);
-        $response->assertRedirect('host/projects/4');
+        $response->assertRedirect('projects/4');
         $this->assertDatabaseHas('projects', $data);
     }
 
     public function testShowAction() {
 
-        $response = $this->get('host/projects/4');
+        $response = $this->get('projects/4');
         $response->assertStatus(200);
         $response->assertViewIs('project.show');
     }
 
     public function testEditAction() {
 
-        $response = $this->get('host/projects/4/edit');
+        $response = $this->get('projects/4/edit');
         $response->assertStatus(200);
         $response->assertViewIs('project.edit');
     }
@@ -69,9 +69,9 @@ class ProjectControllerTest extends TestCase
 
         ];
 
-        $response = $this->put('host/projects/4', $data);
+        $response = $this->put('projects/4', $data);
         $response->assertStatus(302);
-        $response->assertRedirect('host/projects/4');
+        $response->assertRedirect('projects/4');
 
     }
 
@@ -79,7 +79,7 @@ class ProjectControllerTest extends TestCase
     public function testStoreMethodWhenUserNotFound()
     {
       
-        $response = $this->post('/host/projects', [
+        $response = $this->post('/projects', [
             'user_id' => 999,
             'title' => 'Test Project',
             'description' => 'Test project description',

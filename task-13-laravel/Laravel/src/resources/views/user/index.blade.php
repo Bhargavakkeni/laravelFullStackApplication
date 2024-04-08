@@ -111,8 +111,7 @@
                                     data-bs-target="#Modal">view</button>
                             </td>
                             <td>
-                                <a href="{{ route('projects.show', $user->id) }}" class="btn btn-primary"
-                                    target="_blank">Projects</a>
+                                <a href="{{ route('projects.show', $user->id) }}" class="btn btn-primary">Projects</a>
                             </td>
                         </tr>
                     @endforeach

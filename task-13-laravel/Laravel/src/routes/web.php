@@ -3,5 +3,5 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('host/users', 'App\Http\Controllers\HostController');
-Route::resource('host/projects', 'App\Http\Controllers\ProjectController');
+Route::resource('users', 'App\Http\Controllers\UserController');
+Route::resource('projects', 'App\Http\Controllers\ProjectController');

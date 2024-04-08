@@ -3,7 +3,7 @@ async function handleAction(id) {
     var content = document.getElementById('content');
     content.innerHTML = '';
     try {
-        const response = await fetch(`http://localhost:8000/host/users/${id}`);
+        const response = await fetch(`http://localhost:8000/users/${id}`);
 
         if (!response.ok) {
             throw new Error(`error: ${response.status}`);

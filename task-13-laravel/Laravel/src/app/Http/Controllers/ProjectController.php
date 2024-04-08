@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Project;
-use App\Models\Host;
+use App\Models\User;
 
 class ProjectController extends Controller
 {
@@ -51,7 +51,7 @@ class ProjectController extends Controller
             'description' => 'required'
         ]);
 
-        $user = Host::find($request->get('user_id'));
+        $user = User::find($request->get('user_id'));
 
         if ($user === null) {
             session()->flash('error', 'user not found');
@@ -79,7 +79,7 @@ class ProjectController extends Controller
             return to_route('projects.index');
         }
         
-        $user = Host::find($id);
+        $user = User::find($id);
 
         if ($user === null) {
             return response()->json(['error' => 'Not Found'], 404);
