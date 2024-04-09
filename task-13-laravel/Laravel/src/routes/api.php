@@ -16,7 +16,7 @@ use App\Models\Host;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+/*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
@@ -31,7 +31,7 @@ Route::get('/', function () {
 });
 
 //Route::resource('host/users', 'App\Http\Controllers\HostController');
-//Route::resource('host/projects', 'App\Http\Controllers\ProjectController');
+//Route::resource('host/projects', 'App\Http\Controllers\ProjectController');*/
 
 Route::get('/host/user/{user_id}/projects', 'App\Http\Controllers\GetProjectsController@getProjects');
 
