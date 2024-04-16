@@ -1,1 +1,7 @@
-task-14-node
+task-13-laravel/Laravel/docker/mysqldata
+task-13-laravel/Laravel/src/bootstrap/cache
+task-13-laravel/Laravel/src/storage/framework/views
+task-13-laravel/Laravel/src/vendor
+task-13-laravel/Laravel/src/.env
+task-14-node/node-training-main/docker/mysqldata
+task-14-node/node-training-main/src/node_modules
